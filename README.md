@@ -1,5 +1,34 @@
 # Skill de Auditoria e Refatoração Arquitetural
 
+<!-- TOC -->
+
+- [Skill de Auditoria e Refatoração Arquitetural](#skill-de-auditoria-e-refatoração-arquitetural)
+  - [A) Análise Manual](#a-análise-manual)
+    - [Projeto 1 — code-smells-project (Python/Flask — E-commerce API)](#projeto-1--code-smells-project-pythonflask--e-commerce-api)
+    - [Projeto 2 — ecommerce-api-legacy (Node.js/Express — LMS API)](#projeto-2--ecommerce-api-legacy-nodejsexpress--lms-api)
+    - [Projeto 3 — task-manager-api (Python/Flask — Task Manager)](#projeto-3--task-manager-api-pythonflask--task-manager)
+  - [B) Construção da Skill](#b-construção-da-skill)
+    - [Arquivos da Skill](#arquivos-da-skill)
+    - [Decisões de Design](#decisões-de-design)
+  - [C) Resultados](#c-resultados)
+    - [Resumo dos Relatórios](#resumo-dos-relatórios)
+    - [Comparação Antes/Depois](#comparação-antesdepois)
+    - [Checklist de Validação](#checklist-de-validação)
+      - [Fase 1](#fase-1)
+      - [Fase 2](#fase-2)
+      - [Fase 3](#fase-3)
+    - [Logs de Validação](#logs-de-validação)
+  - [D) Como Executar](#d-como-executar)
+    - [Pré-requisitos](#pré-requisitos)
+    - [Instalando dependências](#instalando-dependências)
+    - [Executando a Skill em cada projeto](#executando-a-skill-em-cada-projeto)
+    - [Rodando a aplicação refatorada](#rodando-a-aplicação-refatorada)
+    - [Validando que a refatoração funcionou](#validando-que-a-refatoração-funcionou)
+  - [Developer](#developer)
+  - [License](#license)
+
+<!-- TOC -->
+
 Skill para Claude Code que analisa codebases, gera relatórios de auditoria de anti-patterns e refatora automaticamente para o padrão MVC — agnóstica de tecnologia (Python/Flask e Node.js/Express).
 
 ---
@@ -294,3 +323,13 @@ curl http://localhost:5000/usuarios | grep senha  # deve retornar vazio
 ls reports/
 # audit-project-1.md  audit-project-2.md  audit-project-3.md
 ```
+
+## Developer
+
+Aecio dos Santos Pires
+- Linkedin: https://www.linkedin.com/in/aeciopires/
+- Site: http://aeciopires.com/
+
+## License
+
+MIT License
