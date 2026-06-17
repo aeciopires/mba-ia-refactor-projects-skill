@@ -361,14 +361,14 @@ src/
 ```
 1. [x] Ler TASK.md
 2. [x] Analisar código dos 3 projetos (PLAN.md documenta os achados)
-3. [ ] Criar os 5 arquivos de referência da skill
-4. [ ] Criar SKILL.md
-5. [ ] Executar skill no projeto 1 (code-smells-project)
-6. [ ] Salvar relatório project-1, commitar
-7. [ ] Copiar skill para projeto 2, executar, salvar relatório, commitar
-8. [ ] Copiar skill para projeto 3, executar, salvar relatório, commitar
-9. [ ] Escrever README.md com seções A, B, C, D
-10. [ ] Commitar tudo
+3. [x] Criar os 5 arquivos de referência da skill
+4. [x] Criar SKILL.md
+5. [x] Executar skill no projeto 1 (code-smells-project)
+6. [x] Salvar relatório project-1, commitar
+7. [x] Copiar skill para projeto 2, executar, salvar relatório, commitar
+8. [x] Copiar skill para projeto 3, executar, salvar relatório, commitar
+9. [x] Escrever README.md com seções A, B, C, D
+10. [x] Commitar tudo
 ```
 
 ---
@@ -376,32 +376,32 @@ src/
 ## Critérios de Aceite (checklist final)
 
 ### Skill
-- [ ] Catálogo tem ≥8 anti-patterns com distribuição de severidade
-- [ ] Catálogo inclui detecção de APIs deprecated
-- [ ] Playbook tem ≥8 padrões com exemplos antes/depois
-- [ ] Skill é agnóstica de tecnologia (Python e Node.js)
-- [ ] Fase 2 pausa obrigatoriamente antes de qualquer modificação
+- [x] Catálogo tem ≥8 anti-patterns com distribuição de severidade (14 anti-patterns: 4 CRITICAL, 4 HIGH, 3 MEDIUM, 3 LOW)
+- [x] Catálogo inclui detecção de APIs deprecated (Deprecated API — `Model.query.get()`, `bodyParser`)
+- [x] Playbook tem ≥8 padrões com exemplos antes/depois (10 transformações T-01 a T-10)
+- [x] Skill é agnóstica de tecnologia (Python e Node.js — exemplos em ambas as linguagens em cada arquivo)
+- [x] Fase 2 pausa obrigatoriamente antes de qualquer modificação (imprime `[y/n]` e aguarda confirmação)
 
 ### Fase 1 (cada projeto)
-- [ ] Linguagem detectada corretamente
-- [ ] Framework detectado corretamente
-- [ ] Domínio da aplicação descrito
-- [ ] Número de arquivos condiz com a realidade
+- [x] Linguagem detectada corretamente (Python proj 1 e 3, Node.js proj 2)
+- [x] Framework detectado corretamente (Flask proj 1 e 3, Express proj 2)
+- [x] Domínio da aplicação descrito (E-commerce, LMS, Task Manager)
+- [x] Número de arquivos condiz com a realidade (4, 3, 10 arquivos analisados respectivamente)
 
 ### Fase 2 (cada projeto)
-- [ ] Relatório segue o template definido
-- [ ] Cada finding tem arquivo e linhas exatas
-- [ ] Findings ordenados por severidade
-- [ ] Mínimo de 5 findings por projeto
-- [ ] Pelo menos 1 CRITICAL ou HIGH por projeto
-- [ ] APIs deprecated detectadas (projeto 3)
+- [x] Relatório segue o template definido (reports/audit-project-{1,2,3}.md)
+- [x] Cada finding tem arquivo e linhas exatas
+- [x] Findings ordenados por severidade (CRITICAL → HIGH → MEDIUM → LOW)
+- [x] Mínimo de 5 findings por projeto (12, 12, 11 findings)
+- [x] Pelo menos 1 CRITICAL ou HIGH por projeto (4, 4, 1 CRITICAL respectivamente)
+- [x] APIs deprecated detectadas (projeto 3 — `Model.query.get()` marcado como MEDIUM)
 
 ### Fase 3 (cada projeto)
-- [ ] Estrutura MVC criada
-- [ ] Config extraída para módulo (sem hardcoded)
-- [ ] Models sem lógica de negócio
-- [ ] Controllers orquestram o fluxo
-- [ ] Views/Routes apenas delegam
-- [ ] Error handling centralizado
-- [ ] Aplicação inicia sem erros
-- [ ] Endpoints originais respondem corretamente
+- [x] Estrutura MVC criada (src/config, src/models, src/controllers, src/views ou routes/, src/middlewares)
+- [x] Config extraída para módulo (SECRET_KEY, DATABASE_PATH via os.environ / process.env)
+- [x] Models sem lógica de negócio (queries parametrizadas, sem lógica de desconto ou cálculos)
+- [x] Controllers orquestram o fluxo (pedido_controller, checkoutController, task_controller)
+- [x] Views/Routes apenas delegam (handlers reduzidos para try/catch → next(err) ou 3 linhas)
+- [x] Error handling centralizado (middlewares/error_handler.py e middlewares/auth.py em cada projeto)
+- [x] Aplicação inicia sem erros (validado com `python src/app.py` e `python app.py`)
+- [x] Endpoints originais respondem corretamente (GET /produtos, /checkout, /tasks validados)
